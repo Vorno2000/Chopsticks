@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chopsticks</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <section class="game">
+      <div class="intro">
+        <h1>Chopsticks Game:</h1>
+        <div class="startBtns">
+          <button class="instructionsBtn">Instructions</button>
+          <button class="startGameBtn">Start Game</button>
+        </div>
+      </div>
+
+      <div class="instructions fadeOut">
+        <h1>Instructions:</h1>
+        <p>
+          Chopsticks is a game where 2 players battle to kill eachothers hands.
+          <br />
+          <br />
+          Fingers represent the amount of points each hand has and all hands
+          start with 1 point each. On a players turn, they may choose to add one
+          of their hand's points to one of their opponents hands. A hand is
+          killed when it reaches 5 points. Exceeding 5 will cause the points to
+          rollover from 0 again. A player may also use their turn to transfer
+          points from one hand to another.
+        </p>
+        <button class="instructionsOkBtn">Ok</button>
+      </div>
+
+      <div class="match fadeOut">
+        <div class="score">
+          <div class="computer-score">
+            <h2>Computer:</h2>
+            <p>0</p>
+          </div>
+          <div class="player-score">
+            <h2>Player:</h2>
+            <p>0</p>
+          </div>
+        </div>
+        <div class="hands">
+          <div class="computer-hands">
+            <img class="cLeftHand" src="./assets/1.png" alt="" value="1" />
+            <img class="cRightHand" src="./assets/1.png" alt="" value="1" />
+          </div>
+          <div class="player-hands">
+            <img class="pLeftHand" src="./assets/1.png" alt="" value="1" />
+            <img class="pRightHand" src="./assets/1.png" alt="" value="1" />
+          </div>
+        </div>
+        <div class="selfAdd fadeOut">
+          <div class="selfAddInfo">
+            <label for="selfAddInput" id="selfAddLabel">Add:</label>
+            <input type="number" id="selfAddInput" min="0" max="4" step="1" />
+          </div>
+          <div class="selfAddArrows">
+            <button class="upArrow">&#8593;</button>
+            <button class="downArrow">&#8595;</button>
+          </div>
+          <div class="selfAddButtons">
+            <button class="cancelBtn">Cancel:</button>
+            <button class="selfAddOkBtn">Ok:</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="end fadeOut">
+        <h1 class="winnerText">Player Wins!</h1>
+        <button class="playAgainBtn">Play Again:</button>
+      </div>
+    </section>
+    <script src="./app.js"></script>
+  </body>
+</html>
